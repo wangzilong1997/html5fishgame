@@ -8,6 +8,10 @@ var babyObj = function (){
 
   this.babyTailTimer = 0
   this.babyTailCount = 0
+
+  this.babyEyeTimer = 0
+  this.babyEyeCount = 0
+  this.babyEyeInterval = 1000
 }
 babyObj.prototype.init = function(){
 
@@ -21,6 +25,17 @@ babyObj.prototype.init = function(){
   //this.babyTail.src = "./img/babyTail0.png"
 }
 babyObj.prototype.draw = function() {
+  //babyEye 时间计数
+  this.babyEyeTimer += deltaTime
+  if(this.babyEyeTimer > this.babyEyeInterval){
+    this.babyEyeCount = (this.babyEyeCount + 1) % 2
+    this.babyEyeTimer %= this.babyEyeInterval
+    if(this.babyEyeCount == 0){
+      this.babyEyeInterval = Math.random() * 1500 + 2000
+    }else{
+      this.babyEyeInterval = 200
+    }
+  }
   //baby tail
   this.babyTailTimer += deltaTime
   if(this.babyTailTimer > 50){
@@ -42,7 +57,8 @@ babyObj.prototype.draw = function() {
   var babyTailCount = this.babyTailCount
   ctx1.drawImage(babyTail[babyTailCount],-babyTail[babyTailCount].width * 0.5 + 23,-babyTail[babyTailCount].height *0.5)
   ctx1.drawImage(this.babyBody,-this.babyBody.width * 0.5,-this.babyBody.height *0.5)
-  ctx1.drawImage(this.babyEye,-this.babyEye.width * 0.5,-this.babyEye.height *0.5)
+  var babyEyeCount = this.babyEyeCount
+  ctx1.drawImage(babyEye[babyEyeCount],-babyEye[babyEyeCount].width * 0.5,-babyEye[babyEyeCount].height *0.5)
 
 
   ctx1.restore()
