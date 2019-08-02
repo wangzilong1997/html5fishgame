@@ -12,6 +12,9 @@ var ane;
 var fruit;
 var mom;
 var baby;
+
+var babyTail = [];
+
 var bgPic = new Image();
 
 
@@ -47,6 +50,10 @@ function init() {
 
   baby = new babyObj()
   baby.init()
+  for(var i = 0; i < 8; i++){
+    babyTail[i] = new Image();
+    babyTail[i].src = "./img/babyTail" + i + ".png"
+  }
 }
 
 function gameloop() {
