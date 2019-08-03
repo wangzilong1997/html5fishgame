@@ -36,6 +36,8 @@ babyObj.prototype.draw = function() {
     this.babyBodyTimer %= 300
     if(this.babyBodyCount > 19){
       this.babyBodyCount = 19
+      //gameOver
+      data.gameOver = true
     }
   }
   //babyEye 时间计数
