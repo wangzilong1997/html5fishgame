@@ -12,8 +12,6 @@ dataObj.prototype.draw = function (){
 
   ctx1.fillStyle = "white"
   var double = this.double
-  console.log("this.fruit",this.fruitNum)
-  console.log(this.double)
   ctx1.fillText("num " + this.fruitNum, w * 0.5,h - 50)
   ctx1.fillText("double " + double, w * 0.5,h - 80)
 }

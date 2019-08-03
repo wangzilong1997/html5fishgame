@@ -9,6 +9,11 @@ function momFruitsCollision() {
         //被吃掉了
         fruit.dead(i)
         data.fruitNum++
+        mom.momBodyCount++
+        console.log(mom.mombodyCount)
+        if(mom.momBodyCount > 7){
+          mom.momBodyCount = 7
+        }
         if(fruit.fruitType[i] == "blue")
         {
           data.double = 2
@@ -23,4 +28,5 @@ function momBabyCollison(){
   if(l < 900){
     baby.babyBodyCount = 0
     data.reset()
+    mom.momBodyCount = 0
 }}

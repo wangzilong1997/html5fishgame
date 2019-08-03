@@ -20,7 +20,9 @@ var babyBody = [];
 var momTail = [];
 var momEye = [];
 
-var data
+var data;
+var momBodyOra = [];
+var momBodyBlue = [];
 
 var bgPic = new Image();
 
@@ -81,6 +83,12 @@ function init() {
   data = new dataObj();
   //不知道为啥 先是undefind  然后是nan 所以加的这个
   data.fruitNum = 0
+  for(var i = 0; i < 8;i++){
+    momBodyOra[i] = new Image()
+    momBodyBlue[i] = new Image()
+    momBodyOra[i].src = "./img/bigSwim" + i + ".png"
+    momBodyBlue[i].src = "./img/bigSwimBlue" + i + ".png"
+  }
 }
 
 function gameloop() {
