@@ -24,6 +24,8 @@ var data;
 var momBodyOra = [];
 var momBodyBlue = [];
 
+var wave;
+
 var bgPic = new Image();
 
 
@@ -91,6 +93,9 @@ function init() {
   }
   ctx1.font = "30px Verdana"
   ctx1.textAlign = "center"
+
+  wave = new waveObj()
+  wave.init()
 }
 
 function gameloop() {
@@ -110,9 +115,10 @@ function gameloop() {
   ctx1.clearRect(0,0,canWidth,canHeight);
   mom.draw();
   momFruitsCollision();
-  momBabyCollison();
-  baby.draw();
+  momBabyCollison()
+  baby.draw()
   data.draw()
+  wave.draw()
 }
 function onMouseMove(e) {
   if(!data.gameOver){
