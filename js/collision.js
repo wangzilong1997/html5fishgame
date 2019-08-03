@@ -27,6 +27,8 @@ function momBabyCollison(){
   var l = calLength2(mom.x,mom.y,baby.x,baby.y)
   if(l < 900){
     baby.babyBodyCount = 0
-    data.reset()
+    //data.reset()
     mom.momBodyCount = 0
+    //score updata
+    data.addScore()
 }}
