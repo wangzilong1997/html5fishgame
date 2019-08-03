@@ -18,6 +18,7 @@ var babyEye = [];
 var babyBody = [];
 
 var momTail = [];
+var momEye = [];
 
 var bgPic = new Image();
 
@@ -69,6 +70,10 @@ function init() {
   for(var i = 0; i < 8;i++){
     momTail[i] = new Image()
     momTail[i].src = "./img/bigTail" + i +".png"
+  }
+  for(var i = 0;i < 2;i++){
+    momEye[i] = new Image()
+    momEye[i].src = "./img/bigEye" + i + ".png"
   }
 }
 
