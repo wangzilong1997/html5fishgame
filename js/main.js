@@ -27,6 +27,9 @@ var momBodyBlue = [];
 var wave;
 var halo;
 
+var dust;
+var dustPic = [];
+
 var bgPic = new Image();
 
 
@@ -100,6 +103,14 @@ function init() {
 
   halo = new haloObj()
   halo.init()
+
+  for(var i = 0; i < 7; i++){
+    dustPic[i] = new Image()
+    dustPic[i].src = "./img/dust" + i + ".png"
+  }
+
+  dust = new dustObj()
+  dust.init()
 }
 
 function gameloop() {
@@ -124,6 +135,7 @@ function gameloop() {
   data.draw()
   wave.draw()
   halo.draw()
+  dust.draw()
 }
 function onMouseMove(e) {
   if(!data.gameOver){
