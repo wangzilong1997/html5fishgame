@@ -65,7 +65,7 @@ momObj.prototype.draw = function() {
 
 
   var momBodyCount = this.momBodyCount
-  console.log(this.momBodyCount)
+  //console.log(this.momBodyCount)
   if(data.double == 1){
     ctx1.drawImage(momBodyOra[momBodyCount],-momBodyOra[momBodyCount].width * 0.5,-momBodyOra[momBodyCount].height * 0.5);
   }else{

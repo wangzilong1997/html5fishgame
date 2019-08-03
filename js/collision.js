@@ -11,7 +11,7 @@ function momFruitsCollision() {
           fruit.dead(i)
           data.fruitNum++
           mom.momBodyCount++
-          console.log(mom.mombodyCount)
+          //console.log(mom.mombodyCount)
           if(mom.momBodyCount > 7){
             mom.momBodyCount = 7
           }

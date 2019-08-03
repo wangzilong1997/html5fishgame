@@ -32,7 +32,8 @@ aneObj.prototype.draw = function() {
 
     ctx2.beginPath();
     ctx2.moveTo(this.rootx[i],canHeight);
-    ctx2.quadraticCurveTo(this.rootx[i],canHeight - 100,this.headx[i] + l * this.amp[i],this.heady[i]);
+    this.headx[i] = this.rootx[i] + l * this.amp[i]
+    ctx2.quadraticCurveTo(this.rootx[i],canHeight - 100,this.headx[i],this.heady[i]);
     ctx2.stroke();
 
   }
