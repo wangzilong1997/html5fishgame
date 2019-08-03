@@ -8,6 +8,11 @@ function momFruitsCollision() {
       {
         //被吃掉了
         fruit.dead(i)
+        data.fruitNum++
+        if(fruit.fruitType[i] == "blue")
+        {
+          data.double = 2
+        }
       }
     }
   }
@@ -16,5 +21,6 @@ function momFruitsCollision() {
 function momBabyCollison(){
   var l = calLength2(mom.x,mom.y,baby.x,baby.y)
   if(l < 900){
-    baby.babyBodyCount = 0;
+    baby.babyBodyCount = 0
+    data.reset()
 }}

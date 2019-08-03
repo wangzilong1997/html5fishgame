@@ -20,6 +20,8 @@ var babyBody = [];
 var momTail = [];
 var momEye = [];
 
+var data
+
 var bgPic = new Image();
 
 
@@ -75,6 +77,10 @@ function init() {
     momEye[i] = new Image()
     momEye[i].src = "./img/bigEye" + i + ".png"
   }
+
+  data = new dataObj();
+  //不知道为啥 先是undefind  然后是nan 所以加的这个
+  data.fruitNum = 0
 }
 
 function gameloop() {
@@ -96,6 +102,7 @@ function gameloop() {
   momFruitsCollision();
   momBabyCollison();
   baby.draw();
+  data.draw()
 }
 function onMouseMove(e) {
   if(e.offSetX || e.layerX){
