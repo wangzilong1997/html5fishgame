@@ -25,6 +25,7 @@ var momBodyOra = [];
 var momBodyBlue = [];
 
 var wave;
+var halo;
 
 var bgPic = new Image();
 
@@ -96,6 +97,9 @@ function init() {
 
   wave = new waveObj()
   wave.init()
+
+  halo = new haloObj()
+  halo.init()
 }
 
 function gameloop() {
@@ -119,6 +123,7 @@ function gameloop() {
   baby.draw()
   data.draw()
   wave.draw()
+  halo.draw()
 }
 function onMouseMove(e) {
   if(!data.gameOver){
